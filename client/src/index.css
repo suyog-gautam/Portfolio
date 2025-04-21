@@ -113,39 +113,23 @@
   transform: translateY(-5px);
 }
 
-/* Project card flip effect */
-.project-card-container {
-  perspective: 1000px;
-  height: 360px;
-}
-
-.project-card-inner {
+/* Section title styling */
+.section-title {
   position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  z-index: 1;
 }
 
-.project-card-container:hover .project-card-inner {
-  transform: rotateY(180deg);
-}
-
-.project-card-front, .project-card-back {
+.section-title::before {
+  content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.project-card-back {
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: radial-gradient(circle, rgba(100, 255, 218, 0.1) 0%, rgba(10, 25, 47, 0) 70%);
+  z-index: -1;
+  border-radius: 8px;
+  opacity: 0.8;
 }
 
 /* Theme toggle */

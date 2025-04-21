@@ -29,9 +29,8 @@ const Contact = () => {
   return (
     <section id="contact" ref={sectionRef} className="px-4 md:px-8 py-20 section">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6 flex items-center">
-          <span className="text-neonBlue font-mono mr-4">05.</span>
-          <span>Connect</span>
+        <h2 className="text-3xl md:text-4xl font-bold font-heading mb-6 flex items-center section-title">
+          <span>Contact</span>
           <div className="ml-4 h-px bg-textSecondary bg-opacity-30 flex-grow"></div>
         </h2>
         
@@ -41,41 +40,52 @@ const Contact = () => {
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center">
+          <a 
+            href="mailto:gautamsuyog58@gmail.com" 
+            className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
+          >
             <div className="w-16 h-16 rounded-full bg-neonBlue bg-opacity-10 flex items-center justify-center mb-4">
               <i className="fas fa-envelope text-neonBlue text-2xl"></i>
             </div>
             <h3 className="text-lg font-semibold text-textPrimary mb-2">Email</h3>
-            <a href="mailto:gautamsuyog58@gmail.com" className="text-textSecondary hover:text-neonBlue transition-colors">
+            <span className="text-textSecondary hover:text-neonBlue transition-colors">
               gautamsuyog58@gmail.com
-            </a>
-          </div>
+            </span>
+          </a>
           
-          <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center">
+          <a 
+            href="tel:+9779863048953" 
+            className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
+          >
             <div className="w-16 h-16 rounded-full bg-neonBlue bg-opacity-10 flex items-center justify-center mb-4">
               <i className="fas fa-phone text-neonBlue text-2xl"></i>
             </div>
             <h3 className="text-lg font-semibold text-textPrimary mb-2">Phone</h3>
-            <a href="tel:+9779863048953" className="text-textSecondary hover:text-neonBlue transition-colors">
+            <span className="text-textSecondary hover:text-neonBlue transition-colors">
               +977 9863048953
-            </a>
-          </div>
+            </span>
+          </a>
           
-          <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center">
+          <a 
+            href="https://github.com/suyog-gautam" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
+          >
             <div className="w-16 h-16 rounded-full bg-neonBlue bg-opacity-10 flex items-center justify-center mb-4">
               <i className="fab fa-github text-neonBlue text-2xl"></i>
             </div>
             <h3 className="text-lg font-semibold text-textPrimary mb-2">GitHub</h3>
-            <a href="https://github.com/suyog-gautam" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-neonBlue transition-colors">
+            <span className="text-textSecondary hover:text-neonBlue transition-colors">
               github.com/suyog-gautam
-            </a>
-          </div>
+            </span>
+          </a>
         </div>
         
         <div className="mt-12 text-center">
           <a 
             href="#" 
-            className="inline-block px-8 py-4 bg-neonBlue bg-opacity-10 text-neonBlue border border-neonBlue rounded-lg hover:bg-opacity-20 transition-all duration-300 connect-btn text-lg font-medium"
+            className="inline-block px-8 py-4 bg-neonBlue bg-opacity-10 text-neonBlue border border-neonBlue rounded-lg hover:bg-opacity-20 transition-all duration-300 hero-btn text-lg font-medium"
             onClick={(e) => {
               e.preventDefault();
               // In a real app, this would link to a downloadable resume file

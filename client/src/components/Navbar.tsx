@@ -70,7 +70,7 @@ const Navbar = () => {
               { id: 'skills', label: 'Skills' },
               { id: 'education', label: 'Education' },
               { id: 'projects', label: 'Projects' },
-              { id: 'contact', label: 'Connect' }
+              { id: 'contact', label: 'Contact' }
             ].map((item) => (
               <a 
                 key={item.id}

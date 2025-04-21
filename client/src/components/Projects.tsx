@@ -29,8 +29,7 @@ const Projects = () => {
   return (
     <section id="projects" ref={sectionRef} className="px-4 md:px-8 py-20 section">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold font-heading mb-12 flex items-center">
-          <span className="text-neonBlue font-mono mr-4">04.</span>
+        <h2 className="text-3xl md:text-4xl font-bold font-heading mb-12 flex items-center section-title">
           <span>Projects</span>
           <div className="ml-4 h-px bg-textSecondary bg-opacity-30 flex-grow"></div>
         </h2>
