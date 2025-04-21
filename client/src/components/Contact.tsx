@@ -42,7 +42,7 @@ const Contact = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <a 
             href="mailto:gautamsuyog58@gmail.com" 
-            className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
+            className="about-content-wrapper hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
           >
             <div className="w-16 h-16 rounded-full bg-neonBlue bg-opacity-10 flex items-center justify-center mb-4">
               <i className="fas fa-envelope text-neonBlue text-2xl"></i>
@@ -55,7 +55,7 @@ const Contact = () => {
           
           <a 
             href="tel:+9779863048953" 
-            className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
+            className="about-content-wrapper hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
           >
             <div className="w-16 h-16 rounded-full bg-neonBlue bg-opacity-10 flex items-center justify-center mb-4">
               <i className="fas fa-phone text-neonBlue text-2xl"></i>
@@ -70,7 +70,7 @@ const Contact = () => {
             href="https://github.com/suyog-gautam" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
+            className="about-content-wrapper hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
           >
             <div className="w-16 h-16 rounded-full bg-neonBlue bg-opacity-10 flex items-center justify-center mb-4">
               <i className="fab fa-github text-neonBlue text-2xl"></i>

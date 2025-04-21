@@ -18,11 +18,11 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const { isDarkMode } = useTheme();
   
   return (
-    <div className="bg-darkBlue bg-opacity-40 border border-textSecondary border-opacity-10 rounded-lg overflow-hidden h-full hover-shadow-glow transition-all duration-300 hover:-translate-y-1">
+    <div className="about-content-wrapper rounded-lg overflow-hidden h-full hover-shadow-glow transition-all duration-300 hover:-translate-y-1">
       <div className="h-48 bg-midnight relative overflow-hidden">
         {/* Project Image Placeholder with Icon */}
-        <div className="absolute inset-0 flex items-center justify-center bg-deepBlue bg-opacity-50">
-          <i className={`${project.icon} text-neonBlue text-5xl ${isDarkMode ? 'opacity-30' : 'opacity-50'}`}></i>
+        <div className="absolute inset-0 flex items-center justify-center bg-deepBlue bg-opacity-70">
+          <i className={`${project.icon} text-neonBlue text-5xl ${isDarkMode ? 'opacity-50' : 'opacity-70'}`}></i>
         </div>
       </div>
       
