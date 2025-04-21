@@ -35,7 +35,6 @@ const Hero = () => {
           <p className="font-mono text-neonBlue opacity-80 fade-up">Hi, my name is</p>
           <h1 className="text-5xl md:text-7xl font-bold font-heading text-textPrimary fade-up delay-1">
             <span className="block">Suyog Gautam</span>
-            <span className="block text-textSecondary mt-3">Computer Systems Engineer</span>
           </h1>
           <p className="text-lg md:text-xl text-textSecondary max-w-xl fade-up delay-2">
             A motivated and detail-oriented individual seeking opportunities in the field of Computer Systems Engineering. 
@@ -45,7 +44,7 @@ const Hero = () => {
           <div className="pt-4 flex flex-wrap gap-4 fade-up delay-3">
             <a 
               href="#projects" 
-              className="px-6 py-3 bg-transparent border-2 border-neonBlue text-neonBlue rounded hover:bg-neonBlue hover:bg-opacity-10 transition-all duration-300 hover:shadow-glow"
+              className="hero-btn px-6 py-3 bg-transparent border-2 border-neonBlue text-neonBlue rounded hover:bg-neonBlue hover:bg-opacity-10 transition-all duration-300"
               onClick={(e) => {
                 e.preventDefault();
                 const projectsSection = document.getElementById('projects');
@@ -61,7 +60,7 @@ const Hero = () => {
             </a>
             <a 
               href="#contact" 
-              className="connect-btn px-6 py-3 bg-neonBlue bg-opacity-10 text-neonBlue border-2 border-transparent rounded hover:bg-opacity-20 transition-all duration-300"
+              className="hero-btn px-6 py-3 bg-neonBlue bg-opacity-10 text-neonBlue border-2 border-neonBlue rounded hover:bg-opacity-20 transition-all duration-300"
               onClick={(e) => {
                 e.preventDefault();
                 const contactSection = document.getElementById('contact');
