@@ -24,7 +24,7 @@ const Navbar = () => {
       let currentSection = 'hero';
 
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop;
+        const sectionTop = (section as HTMLElement).offsetTop;
         if (window.scrollY >= sectionTop - 100) {
           currentSection = section.getAttribute('id') || 'hero';
         }
@@ -54,38 +54,28 @@ const Navbar = () => {
         scrolled ? 'bg-midnight bg-opacity-80 shadow-md' : 'bg-opacity-90'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between">
-        <a 
-          href="#hero" 
-          className="flex items-center text-neonBlue font-heading text-xl font-bold"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection('hero');
-          }}
-        >
-          <span className="glow-text">&lt;SG/&gt;</span>
-        </a>
-        
+      <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-center">
         <button 
           onClick={toggleMenu} 
-          className="md:hidden text-textPrimary hover:text-neonBlue focus:outline-none"
+          className="md:hidden absolute left-4 text-textPrimary hover:text-neonBlue focus:outline-none"
         >
           <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} text-xl`}></i>
         </button>
         
-        <div className={`${menuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row w-full md:w-auto mt-4 md:mt-0 transition-all duration-300`}>
-          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+        <div className={`${menuOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row w-full md:w-auto mt-4 md:mt-0 transition-all duration-300 justify-center`}>
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8 items-center">
             {[
+              { id: 'hero', label: 'Home' },
               { id: 'about', label: 'About' },
               { id: 'skills', label: 'Skills' },
               { id: 'education', label: 'Education' },
               { id: 'projects', label: 'Projects' },
-              { id: 'contact', label: 'Contact' }
+              { id: 'contact', label: 'Connect' }
             ].map((item) => (
               <a 
                 key={item.id}
                 href={`#${item.id}`}
-                className={`text-textSecondary hover:text-neonBlue transition-colors duration-300 ${
+                className={`text-textSecondary hover:text-neonBlue transition-colors duration-300 nav-link ${
                   activeSection === item.id ? 'nav-active' : ''
                 }`}
                 onClick={(e) => {
@@ -97,17 +87,6 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <a 
-            href="#" 
-            className="mt-6 md:mt-0 md:ml-8 px-4 py-2 border border-neonBlue text-neonBlue rounded hover:bg-neonBlue hover:bg-opacity-10 transition-all duration-300"
-            onClick={(e) => {
-              e.preventDefault();
-              // In a real app, this would link to a downloadable resume file
-              alert('Resume download would be available in production');
-            }}
-          >
-            Resume
-          </a>
         </div>
       </div>
     </nav>

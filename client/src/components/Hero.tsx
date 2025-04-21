@@ -45,7 +45,7 @@ const Hero = () => {
           <div className="pt-4 flex flex-wrap gap-4 fade-up delay-3">
             <a 
               href="#projects" 
-              className="px-6 py-3 bg-transparent border-2 border-neonBlue text-neonBlue rounded hover:bg-neonBlue hover:bg-opacity-10 transition-all duration-300"
+              className="px-6 py-3 bg-transparent border-2 border-neonBlue text-neonBlue rounded hover:bg-neonBlue hover:bg-opacity-10 transition-all duration-300 hover:shadow-glow"
               onClick={(e) => {
                 e.preventDefault();
                 const projectsSection = document.getElementById('projects');
@@ -61,7 +61,7 @@ const Hero = () => {
             </a>
             <a 
               href="#contact" 
-              className="px-6 py-3 bg-neonBlue bg-opacity-10 text-neonBlue border-2 border-transparent rounded hover:bg-opacity-20 transition-all duration-300"
+              className="connect-btn px-6 py-3 bg-neonBlue bg-opacity-10 text-neonBlue border-2 border-transparent rounded hover:bg-opacity-20 transition-all duration-300"
               onClick={(e) => {
                 e.preventDefault();
                 const contactSection = document.getElementById('contact');
@@ -73,7 +73,7 @@ const Hero = () => {
                 }
               }}
             >
-              Contact Me
+              Connect
             </a>
           </div>
         </div>
