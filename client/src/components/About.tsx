@@ -61,44 +61,44 @@ const About = () => {
             </div>
           </div>
           
-          <div className="bg-darkBlue bg-opacity-50 rounded-lg p-6 border border-textSecondary border-opacity-10">
+          <div className="bg-darkBlue bg-opacity-50 rounded-lg p-6 border border-textSecondary border-opacity-10 shadow-glow">
             <h3 className="text-xl font-semibold mb-6 text-neonBlue">Technical Proficiencies</h3>
             
             <div className="space-y-4">
               <div>
                 <h4 className="text-textPrimary font-medium mb-2">Programming Languages</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">Python</span>
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">JavaScript</span>
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">PHP</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">Python</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">JavaScript</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">PHP</span>
                 </div>
               </div>
               
               <div>
                 <h4 className="text-textPrimary font-medium mb-2">Frontend</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm">React</span>
-                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm">React Native</span>
+                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm tech-card">React</span>
+                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm tech-card">React Native</span>
                 </div>
               </div>
               
               <div>
                 <h4 className="text-textPrimary font-medium mb-2">Backend & Databases</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">Node</span>
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">Express</span>
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">Laravel</span>
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">MongoDB</span>
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">MySQL</span>
-                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm">Firebase</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">Node</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">Express</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">Laravel</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">MongoDB</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">MySQL</span>
+                  <span className="px-3 py-1 bg-midnight border border-neonBlue text-neonBlue rounded text-sm tech-card">Firebase</span>
                 </div>
               </div>
               
               <div>
                 <h4 className="text-textPrimary font-medium mb-2">Tools & Platforms</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm">Git</span>
-                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm">WordPress</span>
+                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm tech-card">Git</span>
+                  <span className="px-3 py-1 bg-midnight border border-accentPurple text-accentPurple rounded text-sm tech-card">WordPress</span>
                 </div>
               </div>
             </div>

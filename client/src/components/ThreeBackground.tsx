@@ -1,8 +1,13 @@
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { useTheme } from '@/context/ThemeContext';
 
 const ThreeBackground = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { isDarkMode } = useTheme();
+  const sceneRef = useRef<THREE.Scene | null>(null);
+  const particlesMeshRef = useRef<THREE.Points | null>(null);
+  const particlesMaterialRef = useRef<THREE.PointsMaterial | null>(null);
   
   useEffect(() => {
     if (!containerRef.current) return;
@@ -13,6 +18,8 @@ const ThreeBackground = () => {
     
     // Initialize scene, camera, and renderer
     const scene = new THREE.Scene();
+    sceneRef.current = scene;
+    
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     
     const renderer = new THREE.WebGLRenderer({ 
@@ -26,7 +33,7 @@ const ThreeBackground = () => {
     
     // Create particles
     const particlesGeometry = new THREE.BufferGeometry();
-    const particlesCount = 500;
+    const particlesCount = 700;
     
     const posArray = new Float32Array(particlesCount * 3);
     
@@ -38,23 +45,30 @@ const ThreeBackground = () => {
     
     const particlesMaterial = new THREE.PointsMaterial({
       size: 0.005,
-      color: 0x64ffda,
+      color: isDarkMode ? 0x64ffda : 0x0077b6, // Different color based on theme
       transparent: true,
       opacity: 0.8
     });
     
+    particlesMaterialRef.current = particlesMaterial;
+    
     const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+    particlesMeshRef.current = particlesMesh;
     scene.add(particlesMesh);
     
     // Position camera
     camera.position.z = 2;
     
     // Animation
+    let animationFrameId: number;
+    
     const animate = () => {
-      requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate);
       
-      particlesMesh.rotation.x += 0.0003;
-      particlesMesh.rotation.y += 0.0002;
+      if (particlesMesh) {
+        particlesMesh.rotation.x += 0.0003;
+        particlesMesh.rotation.y += 0.0002;
+      }
       
       renderer.render(scene, camera);
     };
@@ -72,11 +86,28 @@ const ThreeBackground = () => {
       renderer.setSize(newWidth, newHeight);
     };
     
+    // Add interactive mouse effect
+    const handleMouseMove = (event: MouseEvent) => {
+      if (particlesMesh) {
+        // Move particles slightly based on mouse position
+        const mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+        const mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+        
+        particlesMesh.rotation.x += mouseY * 0.0003;
+        particlesMesh.rotation.y += mouseX * 0.0003;
+      }
+    };
+    
     window.addEventListener('resize', handleResize);
+    window.addEventListener('mousemove', handleMouseMove);
     
     // Cleanup on unmount
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('mousemove', handleMouseMove);
+      
+      cancelAnimationFrame(animationFrameId);
+      
       if (containerRef.current && containerRef.current.contains(renderer.domElement)) {
         containerRef.current.removeChild(renderer.domElement);
       }
@@ -87,6 +118,13 @@ const ThreeBackground = () => {
       renderer.dispose();
     };
   }, []);
+  
+  // Update particle color when theme changes
+  useEffect(() => {
+    if (particlesMaterialRef.current) {
+      particlesMaterialRef.current.color.set(isDarkMode ? 0x64ffda : 0x0077b6);
+    }
+  }, [isDarkMode]);
   
   return (
     <div 
