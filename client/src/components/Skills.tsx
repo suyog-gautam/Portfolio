@@ -34,7 +34,7 @@ const Skills = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Programming Section */}
-          <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 card-3d">
+          <div className="about-content-wrapper card-3d">
             <div className="flex items-center mb-6">
               <i className="fas fa-code text-neonBlue text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold">Programming</h3>
@@ -60,7 +60,7 @@ const Skills = () => {
           </div>
           
           {/* Libraries & Frameworks Section */}
-          <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 card-3d">
+          <div className="about-content-wrapper card-3d">
             <div className="flex items-center mb-6">
               <i className="fas fa-layer-group text-neonBlue text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold">Libraries & Frameworks</h3>
@@ -86,7 +86,7 @@ const Skills = () => {
           </div>
           
           {/* Databases & Tools Section */}
-          <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 card-3d">
+          <div className="about-content-wrapper card-3d">
             <div className="flex items-center mb-6">
               <i className="fas fa-database text-neonBlue text-2xl mr-4"></i>
               <h3 className="text-xl font-semibold">Databases & Tools</h3>
@@ -116,15 +116,15 @@ const Skills = () => {
         <div className="mt-12">
           <h3 className="text-2xl font-semibold mb-6">Soft Skills</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <div className="bg-darkBlue bg-opacity-20 p-4 rounded-lg border border-textSecondary border-opacity-10 flex items-center card-3d">
+            <div className="about-content-wrapper flex items-center card-3d" style={{ padding: "1rem" }}>
               <i className="fas fa-lightbulb text-neonBlue text-xl mr-3"></i>
               <span>Problem-solving</span>
             </div>
-            <div className="bg-darkBlue bg-opacity-20 p-4 rounded-lg border border-textSecondary border-opacity-10 flex items-center card-3d">
+            <div className="about-content-wrapper flex items-center card-3d" style={{ padding: "1rem" }}>
               <i className="fas fa-sync-alt text-neonBlue text-xl mr-3"></i>
               <span>Flexibility</span>
             </div>
-            <div className="bg-darkBlue bg-opacity-20 p-4 rounded-lg border border-textSecondary border-opacity-10 flex items-center card-3d">
+            <div className="about-content-wrapper flex items-center card-3d" style={{ padding: "1rem" }}>
               <i className="fas fa-bolt text-neonBlue text-xl mr-3"></i>
               <span>Quick Learner</span>
             </div>

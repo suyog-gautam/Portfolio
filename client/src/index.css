@@ -271,6 +271,50 @@
   pointer-events: none;
 }
 
+/* Hero profile image with hover effect */
+.profile-hover-container {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.profile-hover-container:hover {
+  box-shadow: 0 0 35px rgba(100, 255, 218, 0.7);
+}
+
+.profile-image-hero {
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.profile-hover-container:hover .profile-image-hero {
+  transform: scale(1.05);
+}
+
+.profile-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle, rgba(100, 255, 218, 0) 0%, rgba(100, 255, 218, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.profile-hover-container:hover .profile-image-overlay {
+  opacity: 1;
+}
+
+/* Light mode adjustment for profile hover */
+.light-mode .profile-hover-container:hover {
+  box-shadow: 0 0 35px rgba(0, 119, 182, 0.7);
+}
+
+.light-mode .profile-image-overlay {
+  background: radial-gradient(circle, rgba(0, 119, 182, 0) 0%, rgba(0, 119, 182, 0.1) 100%);
+}
+
 /* Animated geometric shapes */
 .shape-circle, .shape-square, .shape-triangle, .shape-cross {
   position: absolute;

@@ -41,7 +41,7 @@ const Education = () => {
             </div>
             
             <div className="md:ml-12">
-              <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 education-card hover-shadow-glow transition-all duration-300">
+              <div className="about-content-wrapper education-card hover-shadow-glow transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                   <h3 className="text-xl font-semibold text-textPrimary">BSc (Hons) Computer Systems Engineering</h3>
                   <span className="font-mono text-neonBlue text-sm mt-2 md:mt-0">2022–2025 (Expected)</span>
@@ -63,7 +63,7 @@ const Education = () => {
             </div>
             
             <div className="md:ml-12">
-              <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 education-card hover-shadow-glow transition-all duration-300">
+              <div className="about-content-wrapper education-card hover-shadow-glow transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                   <h3 className="text-xl font-semibold text-textPrimary">+2 HSEB Certificate in Science</h3>
                   <span className="font-mono text-neonBlue text-sm mt-2 md:mt-0">2020–2022</span>

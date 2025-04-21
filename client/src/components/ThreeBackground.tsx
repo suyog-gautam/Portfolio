@@ -80,7 +80,7 @@ const ThreeBackground = () => {
     // Function to create a random shape
     const createRandomShape = (): THREE.Mesh<THREE.BufferGeometry, THREE.MeshBasicMaterial> => {
       const shapeType = Math.floor(Math.random() * 3); // 0: cube, 1: sphere, 2: torus
-      let geometry: THREE.BufferGeometry;
+      let geometry: THREE.BufferGeometry = new THREE.BoxGeometry(0.1, 0.1, 0.1); // Default value
       
       switch(shapeType) {
         case 0:

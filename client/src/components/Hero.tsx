@@ -77,13 +77,14 @@ const Hero = () => {
           </div>
         </div>
         <div className="order-1 md:order-2 flex justify-center items-center fade-up">
-          <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-neonBlue animate-[glow_2s_ease-in-out_infinite_alternate] shadow-[0_0_25px_rgba(100,255,218,0.4)]">
+          <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-neonBlue animate-[glow_2s_ease-in-out_infinite_alternate] shadow-[0_0_25px_rgba(100,255,218,0.4)] profile-hover-container">
             {/* Profile image */}
             <img 
               src="/src/assets/member.png" 
               alt="Suyog Gautam" 
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center profile-image-hero transition-all duration-500"
             />
+            <div className="profile-image-overlay"></div>
           </div>
         </div>
       </div>
