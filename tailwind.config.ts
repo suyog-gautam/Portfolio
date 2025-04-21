@@ -4,6 +4,11 @@ export default {
   darkMode: ["class"],
   content: ["./client/index.html", "./client/src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+      mono: ['Fira Code', 'monospace'],
+      heading: ['Poppins', 'sans-serif'],
+    },
     extend: {
       borderRadius: {
         lg: "var(--radius)",

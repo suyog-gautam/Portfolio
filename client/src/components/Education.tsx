@@ -34,14 +34,14 @@ const Education = () => {
         
         <div className="space-y-12">
           {/* BSc Computer Systems Engineering */}
-          <div className="relative pl-8 md:pl-0 card-3d">
+          <div className="relative pl-8 md:pl-0">
             <div className="hidden md:block absolute top-0 bottom-0 left-0 w-0.5 bg-neonBlue"></div>
             <div className="hidden md:flex absolute left-0 top-0 -translate-x-1/2 h-6 w-6 rounded-full border-2 border-neonBlue bg-midnight items-center justify-center">
               <div className="h-2 w-2 bg-neonBlue rounded-full"></div>
             </div>
             
             <div className="md:ml-12">
-              <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10">
+              <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 education-card hover-shadow-glow transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                   <h3 className="text-xl font-semibold text-textPrimary">BSc (Hons) Computer Systems Engineering</h3>
                   <span className="font-mono text-neonBlue text-sm mt-2 md:mt-0">2022–2025 (Expected)</span>
@@ -63,7 +63,7 @@ const Education = () => {
             </div>
             
             <div className="md:ml-12">
-              <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 card-3d">
+              <div className="bg-darkBlue bg-opacity-30 p-6 rounded-lg border border-textSecondary border-opacity-10 education-card hover-shadow-glow transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
                   <h3 className="text-xl font-semibold text-textPrimary">+2 HSEB Certificate in Science</h3>
                   <span className="font-mono text-neonBlue text-sm mt-2 md:mt-0">2020–2022</span>
