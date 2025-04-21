@@ -77,11 +77,13 @@ const Hero = () => {
           </div>
         </div>
         <div className="order-1 md:order-2 flex justify-center items-center fade-up">
-          <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-neonBlue animate-[glow_2s_ease-in-out_infinite_alternate]">
-            {/* Profile image placeholder */}
-            <div className="w-full h-full bg-darkBlue flex items-center justify-center">
-              <i className="fas fa-user-circle text-8xl text-textSecondary opacity-30"></i>
-            </div>
+          <div className="relative w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-neonBlue animate-[glow_2s_ease-in-out_infinite_alternate] shadow-[0_0_25px_rgba(100,255,218,0.4)]">
+            {/* Profile image */}
+            <img 
+              src="/src/assets/member.png" 
+              alt="Suyog Gautam" 
+              className="w-full h-full object-cover object-center"
+            />
           </div>
         </div>
       </div>
