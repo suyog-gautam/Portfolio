@@ -317,6 +317,28 @@
   background: radial-gradient(circle, rgba(0, 119, 182, 0) 0%, rgba(0, 119, 182, 0.1) 100%);
 }
 
+/* Loading screen styles */
+.loading-text {
+  font-family: 'Poppins', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+}
+
+.glow-bar {
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.6);
+}
+
+.light-mode .loading-text {
+  text-shadow: 0 0 10px rgba(0, 119, 182, 0.5);
+}
+
+.light-mode .glow-bar {
+  background-color: rgba(0, 119, 182, 0.8);
+  box-shadow: 0 0 10px rgba(0, 119, 182, 0.6);
+}
+
 /* Animated geometric shapes */
 .shape-circle, .shape-square, .shape-triangle, .shape-cross {
   position: absolute;

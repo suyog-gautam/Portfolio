@@ -8,7 +8,7 @@ import NotFound from "@/pages/not-found";
 import Home from "@/pages/Home";
 import { ThemeProvider } from "./context/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
-import LoadingAnimation from "./components/LoadingAnimation";
+import LoadingScreen from "./components/LoadingScreen";
 
 function Router() {
   return (
@@ -37,8 +37,8 @@ function App() {
     return () => clearTimeout(timeout);
   }, []);
   
-  // Handle completion of the loading animation
-  const handleAnimationComplete = () => {
+  // Handle completion of the loading screen
+  const handleLoadComplete = () => {
     setLoading(false);
   };
   
@@ -47,10 +47,15 @@ function App() {
       <ThemeProvider>
         <TooltipProvider>
           <Toaster />
+          {/* Full-screen loading overlay */}
           {fontLoaded && loading && (
-            <LoadingAnimation onAnimationComplete={handleAnimationComplete} />
+            <LoadingScreen onLoadComplete={handleLoadComplete} />
           )}
+          
+          {/* Theme toggle is visible even during loading */}
           <ThemeToggle />
+          
+          {/* Main content - completely hidden during loading */}
           <div className={loading ? 'invisible' : 'visible'}>
             <Router />
           </div>
