@@ -53,7 +53,7 @@ const Contact = () => {
             </span>
           </a>
           
-          <a 
+{/*           <a 
             href="tel:+9779863048953" 
             className="about-content-wrapper hover-shadow-glow flex flex-col items-center justify-center transition-all duration-300 no-underline cursor-pointer"
           >
@@ -64,7 +64,7 @@ const Contact = () => {
             <span className="text-textSecondary hover:text-neonBlue transition-colors">
               +977 9863048953
             </span>
-          </a>
+          </a> */}
           
           <a 
             href="https://github.com/suyog-gautam" 
