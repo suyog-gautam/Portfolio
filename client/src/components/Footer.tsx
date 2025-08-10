@@ -9,9 +9,9 @@ const Footer = () => {
           <a href="mailto:gautamsuyog58@gmail.com" className="text-textSecondary hover:text-neonBlue transition-colors">
             <i className="fas fa-envelope"></i>
           </a>
-          <a href="tel:+9779863048953" className="text-textSecondary hover:text-neonBlue transition-colors">
+{/*           <a href="tel:+9779863048953" className="text-textSecondary hover:text-neonBlue transition-colors">
             <i className="fas fa-phone"></i>
-          </a>
+          </a> */}
           <a href="https://github.com/suyog-gautam" target="_blank" rel="noopener noreferrer" className="text-textSecondary hover:text-neonBlue transition-colors">
             <i className="fab fa-github"></i>
           </a>
